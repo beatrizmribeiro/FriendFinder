@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Friend Finder</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">	
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src=".api/friends.js"></script>
+
+</head>
+<style>
+	
+body{
+	background-image: url(http://data.whicdn.com/images/105293757/original.jpg);
+	background-blend-mode: 10;
+	background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-left: 60px;
+    margin-right: 20px;
+
+
+}
+
+#name {
+	margin-left: -10px;
+	
+}
+
+#photo {
+	margin-left: -10px;
+}
+
+
+
+</style>
+
+
+<body>
+
+	<h1>Survey Questions</h1>
+	<hr>
+
+	<h2> About You</h2>
+
+	<div class="panel-body">
+
+		<form role="form">
+
+		<div class="form-group">
+  <label style="font-size:130%" for="name">Name:(Required) </label>
+  <input type="text" class="form-control" id="name">
+</div>
+<div class="form-group">
+  <label style="font-size:130%" for="photo">Link to Photo Image (Required)</label>
+  <input type="text" class="form-control" id="photo">
+</div>
+		</form>
+	</div>		
+
+	<h3><strong>Question 1</strong></h3>
+		<h4>I find it relatively easy to get close to people</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+
+	<h3><strong>Question 2</strong></h3>
+		<h4>I find it difficult to allow myself to depend on others</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q2">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+	
+
+
+	<h3><strong>Question 3</strong></h3>
+		<h4>I often worry that romantic partners don't really love me</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q3">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>	
+
+
+	<h3><strong>Question 4</strong></h3>
+		<h4>I'm comfortable depending on others</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q4">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+
+	<h3><strong>Question 5</strong></h3>
+		<h4>I find that people are never there when you need them</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q5">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+
+	<h3><strong>Question 6</strong></h3>
+		<h4>When I show my feelings for others, I'm afraid they will not fell the same about me</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q6">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+
+	<h3><strong>Question 7</strong></h3>
+		<h4>I often wonder whether romantic partners really care about me</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q7">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+
+	<h3><strong>Question 8</strong></h3>
+		<h4>I know that people will be there when I need them</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q8">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>
+
+	<h3><strong>Question 9</strong></h3>
+		<h4>One consideration in choosing my partner was how he would refect on my career</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q9">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select> 
+
+	<h3><strong>Question 10</strong></h3>
+		<h4>I often worry that romantic partners won't want to stay with me</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q10">
+	 		<option value=""></option>
+            <option value="1">1 (Not at all characteristic of me)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Very characteristic of me)</option>
+      	</select>    
+<hr>
+
+
+	<div>
+
+      	<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><span class="glyphicon glyphicon-ok-circle"></span> Submit </button>
+  	     	
+	</div>
+	<hr>
+
+<footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friend list</a> | <a href="https://github.com/beatrizmribeiro/FriendFinder">GitHub Repo</a></p>
+      </div>
+    </footer>
+  
+
+			
+		<div id="resultsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog" id="modal1">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h2 class="modal-title">
+							<strong>Your Soulmate</strong>
+						</h2>
+					</div>
+					<div class="modal-body">
+						<h2 id="matchName"></h2>
+						<img class="img-responsive" id="matchPic" src="" height="250" weight="250" alt="">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+
+
+	</div>
+
+	
+	<script type="text/javascript">
+
+
+
+		$(document).ready(function () {
+			$("#submit").on("click", function () {
+			
+				function validateForm() {
+					var isValid = true;
+					$('.validate').each(function () {
+						if ($(this).val() === '') {
+						isValid = false;
+						}
+					});
+					$('.chosen-select').each(function () {
+						if ($(this).val() === "") {
+						isValid = false;
+						}
+					});
+					return isValid;
+				}
+			
+				if (validateForm() == true) {
+					//it will create a new friend after submit the asnwers
+					var newFriend = {
+						name: $('#name').val().trim(),
+						photo: $('#photo').val().trim(),
+						scores: [
+							parseInt($('#q1').val()),
+							parseInt($('#q2').val()),
+							parseInt($('#q3').val()),
+							parseInt($('#q4').val()),
+							parseInt($('#q5').val()),
+							parseInt($('#q6').val()),
+							parseInt($('#q7').val()),
+							parseInt($('#q8').val()),
+							parseInt($('#q9').val()),
+							parseInt($('#q10').val()),
+						]
+					};
+					
+					
+					var currentURL = window.location.origin;
+					console.log(currentURL)
+					console.log("newFriend" + newFriend)
+					$.post(currentURL + "/api/friends", newFriend, function (data) {
+						console.log("in post function"+ newFriend)
+						$("#matchName").text(data.name);
+						$("#matchPic").attr("src", data.photo);
+					});
+					// Show the modal with the best match
+					$("#resultsModal").modal('toggle');	
+					$('#name').val("");
+					$('#photo').val("");
+					$('#q1').val("");
+					$('#q2').val("");
+					$('#q3').val("");
+					$('#q4').val("");
+					$('#q5').val("");
+					$('#q6').val("");
+					$('#q7').val("");
+					$('#q8').val("");
+					$('#q9').val("");
+					$('#q10').val("");
+				} 
+				//if something is missing to fill
+				else {
+					alert("Please fill out all fields before submitting!")
+				}
+				
+			});
+		});
+	</script>
+	</body>
+
+</html>
